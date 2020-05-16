@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{ 'Palz' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openList()">
+        <ion-icon name="list"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openPhoto()">
+        <ion-icon name="photos"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  
+  <ion-row>
+      <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchMembers()"></ion-searchbar>
+    <div *ngFor="let item of members" class="col4" style="padding:1px;">
+      <button ion-item (click)="openItem(item)">
+        <div class="tile"><img [src]="item.profile_img" /></div>
+        <p><strong>{{item.name}}</strong></p>
+      </button>            
+    </div>
+  </ion-row>
+  <p (click)="openGroup()" style="text-align: center; margin: 20px;" *ngIf="noMembers == 1 ">
+    This group has no palz for display.
+  </p>
+  <p (click)="openGroup()" style="text-align: center; margin: 20px;">
+      <strong>Tap here to switch to another group.</strong>
+  </p>
+
+</ion-content>

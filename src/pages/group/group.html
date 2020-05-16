@@ -1,0 +1,32 @@
+<ion-content >
+  <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      {{ 'GROUP_INTRO' | translate }}
+    </div>
+  </div>
+  <div padding>
+      <ion-list>
+          <ion-item *ngFor="let item of groups">
+              <button ion-item (click)="openGroup(item.member_id, item.name, item.id, item.description)">
+                  <h2 style="text-align:center; text-transform: uppercase;">{{item.name}}</h2>
+                  <p style="text-align:center;">{{item.description}}</p>
+              </button>
+
+          </ion-item>
+
+          <p style="text-align:center;"><strong><label (click)="login()">Sign in with another account</label> | <label (click)="demo()">View Demo Account.</label> </strong> </p>
+
+          <ion-item style="text-align:center;" *ngIf="noGroup == 1">
+                <p>You belong to no group yet. 
+                  Vist <a href="{{webUrl}}">{{webUrl}}</a> to connect with your  pals in a group first.</p>
+                <p (click)="login()"><strong>Sign in with another account.</strong> </p>
+          </ion-item>
+          <ion-item style="text-align:center;" *ngIf="showReload == 1">
+              <p>{{networkErrorString}}</p>
+              <button ion-button color="primary" block (click)="tryAgain()" >{{ 'TRY_AGAIN' | translate }}</button>
+          </ion-item>
+        </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,81 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{member.surname}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>  
+      <div align="center">
+          
+        <h1> Profile</h1>
+        <button ion-item (click)="imageView(member.profile_img)">
+            <div align="center"> 
+              <img class="profile-image" [src]="member.profile_img" />
+            </div>
+        </button>
+        
+          <h4>{{member.name}}</h4>
+          <h5><a href="tel:{{member.phone}}">{{member.phone}}</a></h5>
+          <p>{{member.quote}}</p>
+      </div>
+    <ion-list>
+        <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='person'></ion-icon>
+            Personal Information
+        </button>
+        
+        <ion-item>
+            <ion-label>Surname: <strong>{{member.surname}}</strong></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email: <strong><a href="mailto:{{member.email}}">{{member.email}}</a></strong></ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Birthday: <strong>{{member.dob}}</strong> | Gender: <strong>{{member.gender}}</strong></ion-label>
+        </ion-item>
+
+        <p style="padding-left: 15px;">
+            Address: <strong>{{member.address}}</strong>
+        </p>
+        
+         <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='logo-game-controller-b'></ion-icon>
+            Interests
+        </button>
+        
+        <ion-item>
+          <ion-label>
+                {{member.interest}}
+          </ion-label>
+        </ion-item>
+        
+       
+        <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='images'></ion-icon>
+            Photos
+        </button>
+
+        <ion-row>
+          <div *ngFor="let photo of photos" class="col4" style="padding:1px;">
+            <button ion-item (click)="imageView(photo.name)">
+              <div class="tile"><img [src]="photo.name" /></div>
+            </button>            
+          </div>
+        </ion-row>
+      
+        
+        <div padding>
+          <!-- <button ion-button block (click)="chat(member.group_member_id)">{{ 'Chat' | translate }}</button> -->
+          <button ion-button block (click)="online(member.group_member_id)" class="online">{{ 'View Online' | translate }}</button>
+        </div>
+        
+    </ion-list>
+        
+</ion-content>

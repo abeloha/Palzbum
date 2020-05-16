@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{ name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>    
+
+    <ion-content>
+
+      <ion-card *ngFor="let item of cardItems">
+    
+        <ion-item (click)="openItem(item.member)">
+          <ion-avatar item-start>
+            <img [src]="item.member.profile_img">
+          </ion-avatar>
+          <h2>{{item.username}}</h2>
+          <p>{{name}}</p>
+        </ion-item>
+    
+        <img [src]="item.img" (click)="imageView(item.img)">
+    
+        <ion-card-content>
+          <p>{{item.description}}</p>
+        </ion-card-content>
+
+      </ion-card>
+    </ion-content>

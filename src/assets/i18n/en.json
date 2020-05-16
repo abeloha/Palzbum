@@ -1,0 +1,73 @@
+{
+  "BACK_BUTTON_TEXT": "Back",
+
+  "NAME": "Name",
+  "EMAIL": "Email",
+  "USERNAME": "Username",
+  "PASSWORD": "Password",
+  "LOGIN": "Sign in",
+  "SIGNUP": "Sign up",
+
+  "TAB1_TITLE": "Items",
+  "TAB2_TITLE": "Search",
+  "TAB3_TITLE": "Settings",
+
+  "MAP_TITLE": "Map",
+
+  "TUTORIAL_SKIP_BUTTON": "Skip",
+  "TUTORIAL_CONTINUE_BUTTON": "Continue",
+
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to Palzbum App",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Palzbum App</b> gives you offline access to your palz photo album.",
+
+  "TUTORIAL_SLIDE2_TITLE": "How to use the Palzbum App",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Create account with palzbum.com, join a group with your pals. Then, this app will guild you all the way to sync your group data.",
+
+  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the tutorial available at palzbum.com",
+
+  "TUTORIAL_SLIDE4_TITLE": "Ready?",
+
+  "WELCOME_INTRO": "Lets get your data synchronized",
+  "WELCOME_TEXT": "PALZBUM APP",
+  "GROUP_INTRO": "Select the group to synchronize",
+  "SWITCH_INTRO": "Select Group",
+  "TRY_AGAIN": "Try Again",
+  
+  "SETTINGS_TITLE": "Settings",
+  "SETTINGS_OPTION1": "Option 1",
+  "SETTINGS_OPTION2": "Option 2",
+  "SETTINGS_OPTION3": "Option 3",
+  "SETTINGS_OPTION4": "Option 4",
+
+  "SETTINGS_PROFILE_BUTTON": "Edit Profile",
+
+  "SETTINGS_PAGE_PROFILE": "Edit Profile",
+
+  "WELCOME_TITLE": "Welcome",
+
+  "LOGIN_TITLE": "Sign in",
+  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
+  "NETWORK_ERROR": "Unable to connect to server. Please check your Network connection and try again.",
+  "LOGIN_BUTTON": "Sign in",
+  "SIGNUP_TITLE": "Sign up",
+  "SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
+  "SIGNUP_BUTTON": "Sign up",
+
+  "LIST_MASTER_TITLE": "Items",
+
+  "ITEM_CREATE_TITLE": "New Item",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
+
+  "ITEM_NAME_PLACEHOLDER": "Name",
+  "ITEM_ABOUT_PLACEHOLDER": "About",
+
+  "DONE_BUTTON": "Done",
+  "CANCEL_BUTTON": "Cancel",
+  "DELETE_BUTTON": "Delete",
+
+  "CARDS_TITLE": "Social",
+
+  "SEARCH_TITLE": "Search",
+  "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\""
+}

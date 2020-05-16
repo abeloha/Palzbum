@@ -1,0 +1,7 @@
+{
+  "name": "super_temp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

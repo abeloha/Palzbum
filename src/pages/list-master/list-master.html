@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{ 'Palz' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openGrid()">
+        <ion-icon name="apps"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openPhoto()">
+        <ion-icon name="photos"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchMembers()"></ion-searchbar>
+    <ion-item-sliding *ngFor="let item of members">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img [src]="item.profile_img" />
+        </ion-avatar>
+        <h2 [innerHTML]="highlighText(item.name)"></h2>
+        <p>{{item.phone}}</p>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+
+  <p (click)="openGroup()" style="text-align: center; margin: 20px;" *ngIf="noMembers == 1 ">
+      This group has no palz for display. 
+  </p>
+  <p (click)="openGroup()" style="text-align: center; margin: 20px;">
+    <strong>Tap here to switch to another group.</strong>
+  </p>
+
+</ion-content>

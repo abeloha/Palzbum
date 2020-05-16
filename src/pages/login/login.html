@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="splash-bg"></div>
+    <div class="splash-info">
+      <div class="splash-logo"></div>
+      <div class="splash-intro">
+        {{ 'WELCOME_INTRO' | translate }}
+      </div>
+    </div>
+    <div padding>
+      <form (submit)="doLogin()"> 
+        <ion-list>
+
+          <ion-item>
+            <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+            <ion-input type="email" placeholder="example@mail.com" required [(ngModel)]="account.email" name="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+            <ion-input type="password" placeholder="password" required [(ngModel)]="account.password" name="password" ></ion-input>
+          </ion-item>
+
+          <div padding>
+            <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+            <br>
+            <p style="text-align:center;" (click)="openWeb(webUrl)">No account? Click here to create one.</p>
+            <p style="text-align:center;" (click)="demo()"><strong>View Demo Account.</strong> </p>
+            
+          </div>
+
+
+        </ion-list>
+      </form>
+    </div>
+</ion-content>

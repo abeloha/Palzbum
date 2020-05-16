@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+
+    <ion-title>{{ 'Photo Album' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openList()">
+        <ion-icon name="apps"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  
+  <ion-row>
+    <div *ngFor="let item of members" class="col8" style="padding:1px;">
+      <button ion-item (click)="openItem(item.album_id,item.name)">
+        <div class="tile"><img [src]="item.img" /></div>
+        <p><strong>{{item.name}} ({{item.count}})</strong></p>
+      </button>            
+    </div>
+  </ion-row>
+  <p style="text-align: center; margin: 20px;" *ngIf="showMsg == 1 ">
+      This group has no album for display yet. <strong>We are checking online data now to synchronize. Ensure your phone is connected to the internet.</strong>
+  </p>
+
+</ion-content>
